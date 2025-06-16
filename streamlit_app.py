@@ -16,7 +16,8 @@ session = cnx.session()
 
 #session = get_active_session()
 my_dataframe = session.table("smoothies.public.FRUIT_OPTIONS").select(col('SEARCH_ON'))
-#st.dataframe(data=my_dataframe, use_container_width=True)
+st.dataframe(data=my_dataframe, use_container_width=True)
+st.stop()
 
 
 ingredients_list = st.multiselect(
@@ -40,8 +41,7 @@ if ingredients_list:
             values ('""" + ingredients_string + """', '"""+ name_on_order +"""')"""
 
    
-    #st.write(ingredients_list)
-    #st.stop()
+
     time_to_insert = st.button('Submit')
     
     if time_to_insert:
