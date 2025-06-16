@@ -19,7 +19,7 @@ my_dataframe = session.table("smoothies.public.FRUIT_OPTIONS").select(col('FRUIT
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
 pd_df = my_dataframe.to_pandas()
-st.dataframe(pf_df)
+st.dataframe(pd_df)
 st.stop()
 
 
